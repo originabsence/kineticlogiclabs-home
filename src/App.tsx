@@ -1,5 +1,6 @@
 import { FormEvent, ReactNode, useEffect, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
+import { Analytics } from '@vercel/analytics/react';
 import pencilCaseOpen from './pencil_case_open.jpeg';
 import pencilCaseClosed from './pencil_box_closed.jpeg';
 import pencilCaseProcess from './pencil_case_3_top_half_1.mp4';
@@ -433,6 +434,7 @@ export default function App() {
         <div className="route-content">{content[page]}</div>
       </main>
       <Footer />
+      <Analytics />
     </div>
   );
 }
